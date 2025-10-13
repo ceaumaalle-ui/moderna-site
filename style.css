@@ -313,10 +313,7 @@ h2 {
     section {
         padding: 60px 20px; 
     } 
-  .contato {
-    padding-top: 80px !important; 
-}
-
+ 
     /* Ajuste específico para o PORTFÓLIO */
     .portfolio {
         padding: 80px 20px 60px 20px; 
@@ -378,6 +375,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
