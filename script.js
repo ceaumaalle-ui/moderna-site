@@ -1,12 +1,3 @@
-// Smooth scroll para navegação suave
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const alvo = document.querySelector(this.getAttribute('href'));
-    alvo.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     // 1. Seleciona o botão de hambúrguer e a navegação (que tem o ID 'mobile-nav')
     const menuToggle = document.querySelector('.menu-toggle');
@@ -27,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
