@@ -348,10 +348,56 @@ h2 {
         font-size: 2em;
     }
 
-    /* 2. MENU DE NAVEGAÇÃO (ESCONDIDO para darmos espaço ao menu hamburguer) */
-    .nav {
-        display: none;
+   /* 2. MENU DE NAVEGAÇÃO E BOTÃO (Aparece no Mobile) */
+    
+    /* 1. Mostra o botão hambúrguer */
+    .menu-toggle {
+        display: block;
     }
+
+    /* 2. Estilo e posição do menu mobile */
+    .nav {
+        /* Posição absoluta para cobrir a tela */
+        position: absolute;
+        top: 81px; /* Logo abaixo do header (60px logo + 20px padding) */
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: var(--azul); /* Cor de fundo do menu */
+        
+        /* Oculta o menu, mas ele será mostrado pelo JavaScript */
+        display: none; 
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .nav.active {
+        display: block; /* Mostra quando o JS adicionar a classe 'active' */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Coloca os links em coluna */
+        gap: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav li {
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav li:last-child {
+        border-bottom: none;
+    }
+
+    .nav a {
+        color: var(--branco); /* Links brancos no fundo azul */
+        font-weight: 500;
+        display: block;
+    }   
 
     /* 3. GRID DE SERVIÇOS (Volta para uma coluna) */
     .servicos-grid {
@@ -399,6 +445,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
