@@ -329,14 +329,29 @@ h2 {
 }
 }
 
- /* 7. PORTFÓLIO: Correção de imagens para se ajustar ao mobile */
+ /* 7. PORTFÓLIO: Correção de imagens e alinhamento para mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Garante uma coluna única */
+        gap: 20px; /* Reduz o espaçamento entre os itens */
+        padding: 0 15px; /* Adiciona padding horizontal ao grid */
+    }
+
+    .portfolio-item {
+        text-align: center; /* Centraliza o conteúdo dentro de cada item */
+        padding: 0; /* Remove padding desnecessário do item */
+    }
+
     .portfolio-item img {
         width: 100%; /* Garante que a imagem preencha a largura total do item */
-        height: auto; /* Evita o corte, mantendo a proporção correta */
-        display: block; /* Ajuda na renderização em alguns navegadores */
+        height: auto; /* Mantém a proporção */
+        display: block; /* Remove espaços extras */
+        margin: 0 auto; /* Centraliza a imagem se ela for menor que 100% (caso raro) */
+        max-width: 250px; /* Limita o tamanho máximo da imagem para não ficar gigante em telas maiores que o item */
     }
-.btn {
-  margin-bottom: 10px;
 
-}
+    /* Ajuste do espaçamento do título do Portfólio */
+    .portfolio h2 {
+        padding-top: 20px; /* Reduz o padding superior */
+        margin-bottom: 20px; /* Reduz o margin inferior */
+    }
 
