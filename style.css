@@ -329,7 +329,14 @@ h2 {
 }
 }
 
+ /* 7. PORTFÓLIO: Correção de imagens para se ajustar ao mobile */
+    .portfolio-item img {
+        width: 100%; /* Garante que a imagem preencha a largura total do item */
+        height: auto; /* Evita o corte, mantendo a proporção correta */
+        display: block; /* Ajuda na renderização em alguns navegadores */
+    }
 .btn {
   margin-bottom: 10px;
 
 }
+
