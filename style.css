@@ -312,7 +312,10 @@ h2 {
     /* Reduz o padding de TODAS as seções para 20px nas laterais */
     section {
         padding: 60px 20px; 
-    }
+    } 
+  .contato {
+    padding-top: 80px !important; 
+}
 
     /* Ajuste específico para o PORTFÓLIO */
     .portfolio {
@@ -375,6 +378,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
