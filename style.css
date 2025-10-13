@@ -302,12 +302,8 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
-  /* NOVO! Adiciona um espaço de 100px no topo da tela para que o menu fixo não cubra a seção de destino. */
-    html { /* */
-        scroll-padding-top: 100px; /* */
-    } /* */
-    
-    /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
+  
+  /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
     .container {
         padding: 0 20px;
@@ -379,5 +375,6 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
