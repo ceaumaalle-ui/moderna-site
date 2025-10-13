@@ -12,11 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = nav.querySelectorAll('a');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            // Garante que o menu se feche automaticamente ao clicar em um link
-            nav.classList.remove('active'); 
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Impede o comportamento padrão do link (rolagem instantânea)
+            
+            const targetId = this.getAttribute('href'); // Ex: "#contato"
+            const target = document.querySelector(targetId); // Seleciona a seção destino
+            
+            // Fecha o menu (para dispositivos móveis)
+            nav.classList.remove('active');
+
+            // Aguarda o menu fechar completamente (caso tenha transição no CSS)
+            setTimeout(() => {
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300); // 300ms é o tempo médio da transição do menu
         });
     });
 });
-
-
