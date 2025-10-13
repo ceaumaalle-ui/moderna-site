@@ -301,7 +301,11 @@ h2 {
 /* MEDIA QUERY: CORREÇÕES PARA CELULARES */
 /* ==================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+  /* NOVO! Adiciona um espaço de 80px no topo da tela para que o menu fixo não cubra a seção de destino. */
+    html { /* */
+        scroll-padding-top: 80px; /* */
+    } /* */
     
     /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
@@ -375,3 +379,4 @@ h2 {
         padding: 20px;
     }
 }
+
