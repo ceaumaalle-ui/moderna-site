@@ -326,6 +326,11 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
+ 
+  /* Adicione esta regra de volta na sua @media query */
+html {
+    scroll-padding-top: 80px; 
+} 
   
   /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
@@ -445,6 +450,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
