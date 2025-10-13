@@ -326,29 +326,6 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
-
- /* SOLUÇÃO FINAL PARA ROLAGEM: DESATIVAR O HEADER FIXO NO MOBILE */
-@media (max-width: 768px) {
-
-    /* ... código que você já tem (container, section, etc.) ... */
-
-    /* [NOVO] Desativa a posição fixa do cabeçalho */
-    .header {
-        position: static; /* Volta à posição normal/estática */
-        width: 100%;
-        box-shadow: none; /* Opcional: remove a sombra de 'flutuação' */
-    }
-
-    /* [NOVO] Corrige o Menu Hambúrguer para que ele apareça */
-    .nav {
-        /* A posição do menu suspenso deve ser ajustada para funcionar sem o header fixo */
-        position: absolute;
-        top: 65px; /* Ajusta o topo para ficar abaixo do header estático (aprox. a altura) */
-        /* ... o restante do estilo 'nav' que você já tem (display: none, background, etc.) ... */
-    }
-    
-    /* ... o restante do seu código ... */
-}
   
   /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
@@ -468,6 +445,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
