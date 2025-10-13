@@ -1,58 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 1. Seleciona o botão de hambúrguer e a navegação (que tem o ID 'mobile-nav')
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.getElementById('mobile-nav');
-    const header = document.querySelector('.header');
 
-    // Abre/fecha menu hambúrguer
+    // 2. Adiciona o evento de clique para abrir/fechar o menu
     menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
+        nav.classList.toggle('active'); // Adiciona/remove a classe 'active' para exibir/ocultar o menu
     });
 
-    // Links do menu
+    // 3. Adiciona evento de clique em CADA link do menu
     const navLinks = nav.querySelectorAll('a');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const target = document.querySelector(targetId);
-
-            // Fecha menu
-            nav.classList.remove('active');
-
-            setTimeout(() => {
-                if (target) {
-                    const headerHeight = header.offsetHeight;
-                    const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = elementPosition - headerHeight;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }, 300);
+        link.addEventListener('click', function() {
+            // Garante que o menu se feche automaticamente ao clicar em um link
+            nav.classList.remove('active'); 
         });
     });
-
-    // Corrige também o botão "Fale Conosco" da home
-    const faleConosco = document.querySelector('.home .btn');
-    if (faleConosco) {
-        faleConosco.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const target = document.querySelector('#contato');
-            const headerHeight = header.offsetHeight;
-            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerHeight;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        });
-    }
 });
+
+
+
 
 
