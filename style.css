@@ -289,7 +289,7 @@ h2 {
     
     /* 1. LAYOUT GERAL E TEXTOS */
     .container {
-        padding: 0 15px; /* Reduz o padding para margens menores */
+        padding: 0 15px; 
     }
 
     /* Reduz o tamanho de fontes grandes no mobile */
@@ -304,19 +304,23 @@ h2 {
 
     /* 3. GRID DE SERVIÇOS (Volta para uma coluna) */
     .servicos-grid {
-        grid-template-columns: 1fr; /* Força uma coluna única no mobile */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
 
     /* 4. GRID DE PORTFÓLIO: DEVE FICAR EM UMA COLUNA */
     .portfolio-grid {
-        grid-template-columns: 1fr; /* Força uma coluna única no mobile */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
 
     /* 5. CORREÇÃO DA IMAGEM DO PORTFÓLIO E ESPAÇAMENTO */
+    .portfolio-item {
+        text-align: center; /* Força a centralização de todo o conteúdo */
+        padding: 0;
+    }
     .portfolio-item img {
-        /* Apenas dentro da Media Query, forçamos o ajuste mobile */
+        /* PROPRIEDADES CORRETAS EM INGLÊS */
         width: 100%; 
         height: auto; 
         max-width: 300px; 
