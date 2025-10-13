@@ -280,8 +280,56 @@ h2 {
 
 .home-content p {
   margin-bottom: 25px;
+
+  /* ==================================== */
+/* MEDIA QUERY: CORREÇÕES PARA CELULARES */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    
+    /* 1. LAYOUT GERAL E TEXTOS */
+    .container {
+        padding: 0 15px; /* Reduz o padding para margens menores */
+    }
+
+    /* Reduz o tamanho de fontes grandes no mobile */
+    .home h1 {
+        font-size: 2em;
+    }
+
+    /* 2. MENU DE NAVEGAÇÃO (DESAPARECE OU FICA VERTICAL) */
+    .nav {
+        display: none; /* Esconde o menu de navegação, pode ser substituído por um menu hamburguer mais tarde */
+    }
+
+    /* 3. GRID DE SERVIÇOS (Volta para uma coluna) */
+    .servicos-grid {
+        grid-template-columns: 1fr; /* Força uma coluna única no mobile */
+        gap: 30px;
+    }
+
+    /* 4. GRID DE PORTFÓLIO (Volta para uma coluna) */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Força uma coluna única no mobile */
+        gap: 30px;
+    }
+    
+    /* 5. WHATSAPP FLUTUANTE (Posição) */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 6. FORMULÁRIO (Melhora o espaçamento) */
+    .form-pesquisa {
+        padding: 20px;
+    }
+}
 }
 
 .btn {
   margin-bottom: 10px;
+
 }
