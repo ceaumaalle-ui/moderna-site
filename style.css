@@ -297,6 +297,30 @@ h2 {
   margin-bottom: 25px;
 }
 
+/* ================================================= */
+/* ESTILOS GERAIS DO BOTÃO HAMBÚRGUER (linha 299) */
+/* ================================================= */
+
+.menu-toggle {
+    /* Por padrão, o botão fica ESCONDIDO no desktop. */
+    display: none; 
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Garante que fique por cima do menu fixo */
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--azul);
+    transition: 0.3s;
+} 
+
 /* ==================================== */
 /* MEDIA QUERY: CORREÇÕES PARA CELULARES */
 /* ==================================== */
@@ -375,6 +399,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
