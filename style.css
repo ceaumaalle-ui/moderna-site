@@ -326,7 +326,20 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
- 
+
+  /* CORREÇÃO DO HEADRER PARA ROLAGEM */
+.header {
+    /* Garante que o cabeçalho ocupe 100% da largura, que é a causa de muitos bugs de rolagem. */
+    width: 100%;
+    /* Garante que ele fique sobre o conteúdo */
+    z-index: 1000; 
+}
+
+/* Restaura o método mais confiável de espaçamento */
+html {
+    scroll-padding-top: 81px; 
+} 
+  
   /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
     .container {
@@ -445,6 +458,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
