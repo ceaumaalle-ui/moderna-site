@@ -17,7 +17,7 @@ html, body {
   margin: 0;
   padding: 0;
   /* Garante que o conteúdo não cause barra de rolagem horizontal */
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 /* Torna o body um container flexível para empurrar o rodapé */
@@ -31,8 +31,18 @@ body {
 
 /* Classe adicionada no HTML para envolver o conteúdo principal e garantir que ele cresça */
 .content-wrapper {
-  flex-grow: 1; 
+  flex-grow: 1;
 }
+
+/* --- CORREÇÃO CHAVE: CONTAINER GLOBAL --- */
+/* Esta classe é usada em várias seções para centralizar e dar espaçamento.
+   Ajustamos o padding lateral para 40px no desktop. */
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 40px; 
+}
+/* --- FIM CORREÇÃO CHAVE --- */
 
 
 /* HEADER */
@@ -48,7 +58,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  /* O padding horizontal agora é definido pela classe .container global, 
+     mas mantemos o padding vertical de 10px */
+  padding-top: 10px; 
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -115,7 +128,8 @@ body {
 
 /* SEÇÕES GERAIS */
 section {
-  padding: 80px 40px;
+  /* Mantém o padding do desktop, que será corrigido no mobile via media query */
+  padding: 80px 40px; 
   text-align: center;
 }
 
@@ -150,7 +164,8 @@ h2 {
 .portfolio {
   background: #f7f9fb;
   margin-top: 50px;
-  padding: 120px 40px 80px 40px;
+  /* Mantém o padding do desktop, que será corrigido no mobile via media query */
+  padding: 120px 40px 80px 40px; 
 }
 
 .portfolio h2 {
@@ -280,16 +295,28 @@ h2 {
 
 .home-content p {
   margin-bottom: 25px;
+}
 
-  /* ==================================== */
+/* ==================================== */
 /* MEDIA QUERY: CORREÇÕES PARA CELULARES */
 /* ==================================== */
 
 @media (max-width: 768px) {
     
-    /* 1. LAYOUT GERAL E TEXTOS */
+    /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
+    /* Garante que o container use menos padding nas laterais (20px) */
     .container {
-        padding: 0 15px; 
+        padding: 0 20px;
+    }
+
+    /* Reduz o padding de TODAS as seções para 20px nas laterais */
+    section {
+        padding: 60px 20px; 
+    }
+
+    /* Ajuste específico para o PORTFÓLIO */
+    .portfolio {
+        padding: 80px 20px 60px 20px; 
     }
 
     /* Reduz o tamanho de fontes grandes no mobile */
@@ -299,18 +326,18 @@ h2 {
 
     /* 2. MENU DE NAVEGAÇÃO (ESCONDIDO para darmos espaço ao menu hamburguer) */
     .nav {
-        display: none; 
+        display: none;
     }
 
     /* 3. GRID DE SERVIÇOS (Volta para uma coluna) */
     .servicos-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
     /* 4. GRID DE PORTFÓLIO: DEVE FICAR EM UMA COLUNA */
     .portfolio-grid {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
@@ -319,20 +346,20 @@ h2 {
         text-align: center; /* Força a centralização de todo o conteúdo */
         padding: 0;
     }
-    .portfolio-item img {
-        /* PROPRIEDADES CORRETAS EM INGLÊS */
-        width: 100%; 
-        height: auto; 
-        max-width: 300px; 
-        margin: 0 auto; 
+    .portfolio-grid img {
+        width: 100%;
+        height: auto;
+        max-width: 90%; /* Ajuste a largura da imagem para não encostar na borda */
+        margin: 15px auto 10px auto; /* Centraliza */
         display: block;
+        padding: 0; /* Remove padding desnecessário na imagem */
     }
 
     /* 6. Ajuste do espaçamento do título do Portfólio */
     .portfolio h2 {
-        padding-top: 20px; 
-        margin-bottom: 20px; 
-        text-align: center; 
+        padding-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
     }
     
     /* 7. WHATSAPP FLUTUANTE */
