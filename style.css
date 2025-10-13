@@ -326,7 +326,17 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
- 
+
+  /* CORREÇÃO FORÇADA DE ROLAGEM SÓ PARA A SEÇÃO CONTATO NO MOBILE */
+#contato {
+    /* 1. Puxa a seção para cima, forçando a rolagem a começar mais cedo (atrás do header) */
+    margin-top: -81px; 
+    
+    /* 2. Empurra o conteúdo para baixo, para que ele apareça abaixo do header. 
+       O valor é a altura do header + o padding original da seção. */
+    padding-top: 81px;
+} 
+  
   /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
     .container {
@@ -445,6 +455,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
