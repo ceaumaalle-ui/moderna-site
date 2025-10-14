@@ -132,10 +132,7 @@ section {
   padding: 80px 40px; 
   text-align: center;
 }
-#contato-target {
-    /* Garante que o ponto de rolagem fique 100px abaixo do header fixo */
-    scroll-margin-top: 100px;
-}
+
 h2 {
   margin-bottom: 30px;
 }
@@ -448,6 +445,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
