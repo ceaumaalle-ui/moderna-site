@@ -49,6 +49,8 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  left: 0;   
+  right: 0; 
   background: var(--branco);
   border-bottom: 1px solid #ddd;
   z-index: 1000;
@@ -445,6 +447,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
