@@ -17,7 +17,7 @@ html, body {
   margin: 0;
   padding: 0;
   /* Garante que o conteúdo não cause barra de rolagem horizontal */
-  overflow-x: hidden;
+  
 }
 
 /* Torna o body um container flexível para empurrar o rodapé */
@@ -447,6 +447,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
