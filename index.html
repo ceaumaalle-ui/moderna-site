@@ -92,8 +92,9 @@
                 <h2>Pesquisa de Marca Grátis</h2>
                 <p>Preencha o formulário abaixo e nossa equipe entrará em contato com o resultado da sua pesquisa de viabilidade.</p>
                 
-                <form name="pesquisa" method="POST" data-netlify="true" class="form-pesquisa">
-                    <input type="hidden" name="_next" value="/sucesso.html" />
+               <form name="pesquisa" method="POST" data-netlify="true" class="form-pesquisa">
+                <input type="hidden" name="form-name" value="pesquisa" />
+                <input type="hidden" name="_next" value="/sucesso.html" />
                     
                     <label>Nome:</label>
                     <input type="text" name="nome" required>
@@ -138,5 +139,6 @@
 </body>
 
 </html>
+
 
 
