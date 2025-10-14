@@ -328,7 +328,11 @@ h2 {
 /* ==================================== */
 
 @media (max-width: 768px) { 
-    
+     /* NOVO: AJUSTE DE ALTURA DO HEADER NO MOBILE */
+    .header .container {
+        padding-top: 5px;   /* Reduzido de 10px para 5px */
+        padding-bottom: 5px;/* Reduzido de 10px para 5px */
+    }
   /* 1. LAYOUT GERAL E TEXTOS: REDUÇÃO DO PADDING HORIZONTAL */
     /* Garante que o container use menos padding nas laterais (20px) */
     .container {
@@ -447,6 +451,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
