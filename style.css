@@ -132,9 +132,7 @@ section {
   padding: 80px 40px; 
   text-align: center;
 }
-section[id] {
-    scroll-margin-top: 100px; 
-}
+
 h2 {
   margin-bottom: 30px;
 }
@@ -448,11 +446,6 @@ h2 {
     }
 }
 
-/* 9. CORREÇÃO FORÇADA PARA O SCROLL DA SEÇÃO CONTATO NO MOBILE */
-     #contato {
-         scroll-margin-top: 150px; /* Força um deslocamento maior no celular */
-     }
- }
 
 
 
