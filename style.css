@@ -86,7 +86,7 @@ body {
 
 /* HOME */
 .home {
-  height: 100vh;
+  
   background: var(--azul);
   color: var(--branco);
   display: flex;
@@ -445,6 +445,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
