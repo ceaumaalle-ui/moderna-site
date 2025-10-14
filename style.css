@@ -448,7 +448,11 @@ h2 {
     }
 }
 
-
+/* 9. CORREÇÃO FORÇADA PARA O SCROLL DA SEÇÃO CONTATO NO MOBILE */
+     #contato {
+         scroll-margin-top: 150px; /* Força um deslocamento maior no celular */
+     }
+ }
 
 
 
