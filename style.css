@@ -48,7 +48,7 @@ body {
 /* HEADER */
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   left: 0;   
   right: 0; 
   background: var(--branco);
@@ -447,6 +447,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
