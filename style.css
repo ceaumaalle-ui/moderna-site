@@ -446,6 +446,16 @@ h2 {
     }
 }
 
+/* AJUSTE PARA COMPENSAR A REMOÇÃO DO 100VH NO DESKTOP */
+@media (min-width: 769px) {
+    .home {
+        min-height: 100vh;
+        /* Padding extra para visual */
+        padding-top: 150px; 
+        padding-bottom: 150px; 
+    }
+}
+
 
 
 
