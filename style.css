@@ -323,6 +323,22 @@ h2 {
     transition: 0.3s;
 } 
 
+/* --- AJUSTE DO BOTÃO DO FORMULÁRIO --- */
+.form-pesquisa .btn {
+    background-color: #0056b3; /* mesmo azul do botão "Fale Conosco" */
+    color: #fff; /* texto branco */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-pesquisa .btn:hover {
+    background-color: #003f80; /* tom um pouco mais escuro no hover */
+}
+
 /* ==================================== */
 /* MEDIA QUERY: CORREÇÕES PARA CELULARES */
 /* ==================================== */
@@ -451,6 +467,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
