@@ -381,7 +381,7 @@ h2 {
     .nav {
         /* Posição absoluta para cobrir a tela */
         position: absolute;
-        top: 81px; /* Logo abaixo do header (60px logo + 20px padding) */
+        top: 60px; /* Logo abaixo do header (60px logo + 20px padding) */
         left: 0;
         width: 100%;
         height: auto;
@@ -467,6 +467,7 @@ h2 {
         padding: 20px;
     }
 }
+
 
 
 
